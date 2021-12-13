@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>上海有戏</title>
+                        <!-- Global site tag (gtag.js) - Google Analytics -->
+                        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-209918189-1"></script>
+                        <script>
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'UA-209918189-1');
+                        </script>
+                        <script src="https://www.googleoptimize.com/optimize.js?id=OPT-5H6LWNT"></script>
+                        <!-- Google Tag Manager -->
+                        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                        })(window,document,'script','dataLayer','GTM-KJ5RZJ5');</script>
+                        <!-- End Google Tag Manager -->
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/static/css/styles.css" rel="stylesheet">
+        <!-- Fonts CSS-->
+        <link rel="stylesheet" href="/static/css/body.css">
+        <link rel="stylesheet" href="/static/css/heading.css">
+        <style type="text/css"> 
+            a:link,a:visited{ 
+             text-decoration:none;   
+            } 
+            a:hover{ 
+             text-decoration:underline;   
+            } 
+            </style>
+    </head>
+    <body id="page-top">
+                <!-- Google Tag Manager (noscript) -->
+                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJ5RZJ5"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                <!-- End Google Tag Manager (noscript) -->
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+    <div class="container"><a class="navbar-brand js-scroll-trigger" href="home">上海有戏</a>
+        <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                {% if current_user.is_authenticated %}
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="drama">戏剧</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="discussion">论坛</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="profile">个人主页</a>
+                </li>
+                {% else %}
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="drama">戏剧</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="discussion">论坛</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login">登录</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="/static/assets/img/3668858-drama-entertainment-mask-theater_108039.png" alt="">
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading mb-0">您的一站式戏剧管家</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0"> </p>
+            </div>
+        </header>
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block"><a href="drama" style="color: #2c3e50;">最近开场</a></h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                            <!-- Portfolio Grid Items-->
+                            <div class="row justify-content-center">
+                                <!-- Portfolio Items-->
+                                <div class="col-md-6 col-lg-4 mb-5">
+                                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
+                                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                                        </div><img class="img-fluid" src="/static/assets/img/pic/Romeo.webp" alt="罗密欧与朱丽叶"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-5">
+                                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                                        </div><img class="img-fluid" src="/static/assets/img/pic/桑塔露琪亚.webp" alt="桑塔露琪亚"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-5">
+                                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                                        </div><img class="img-fluid" src="/static/assets/img/pic/人间失格.webp" alt="人间失格"/>
+                                    </div>
+                                </div>
+                    </section>
+                    <!-- Portfolio Modal-->
+                    <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content">
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                                <div class="modal-body text-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8">
+                                                <!-- Portfolio Modal - Title-->
+                                                <h2 class="portfolio-modal-title text-secondary mb-0">罗密欧与朱丽叶</h2>
+                                                <!-- Icon Divider-->
+                                                <div class="divider-custom">
+                                                    <div class="divider-custom-line"></div>
+                                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                                    <div class="divider-custom-line"></div>
+                                                </div>
+                                                <!-- Portfolio Modal - Image-->
+                                                <a href="7">
+                                                <img class="img-fluid rounded mb-5" src="/static/assets/img/pic/Romeo.webp" alt="Log Cabin"/>
+                                                </a>
+                                                <!-- Portfolio Modal - Text-->
+                                                <p class="mb-5">一对被灾星诅咒的悲情恋人，纵使隔着家族世仇的重重阻挠，依然双向奔赴，勇敢相恋——莎士比亚的一出悲剧《罗密欧与朱丽叶》传世至今，已成为爱情经典。1998年，法国作曲家捷哈·皮斯葛维克（Gerard Presgurvic）将这部传世之作搬上了音乐剧舞台，自2001年在法国首演以来，它的巡演足迹遍布40多个国家，全球观演人次超过1200万，被欧洲媒体誉为“21世纪最伟大的流行音乐剧”。剧中金曲《爱神》（Aimer）和《世界之王》（Les Rois du Monde）一度霸占法国流行音乐榜首长达17周，被称为“错过了这两首歌就错过了人生的一部分诗意”。迄今这部作品已被翻译成英、德、韩、日、西、意等10种语言，吸引各国观众走进剧场。
+                                                <br>
+                                                音乐剧《罗密欧与朱丽叶》（下称《罗朱》）与上海文化广场的缘分始于2012年。当年该剧的法语原版作为年末大戏首次引进国内，在上海连演20场。之后数年，该剧在中国有近三轮巡演，均反响热烈。上海文化广场副总经理费元洪认为，《罗朱》深受中国观众欢迎，不仅因为这是一个经典故事，也是因为法国音乐剧的写意感、以诗与歌为核心的创作理念与中国人千百年来戏曲传承的审美非常契合。今年冬天，《罗朱》将与文化广场再续前缘——作为首个官方授权商业制作演出的中文版本，音乐剧《罗密欧与朱丽叶》将作为“2021年末演出季”开幕大戏在文化广场主剧场连演25场，并以上海站为起点开启首轮全国巡演。
+                                                </p>
+                                                <center><a href="https://detail.damai.cn/item.htm?spm=a2oeg.search_category.0.0.60594d15IXRHak&id=654104924238&clicktitle=%E9%9F%B3%E4%B9%90%E5%89%A7%E3%80%8A%E7%BD%97%E5%AF%86%E6%AC%A7%E4%B8%8E%E6%9C%B1%E4%B8%BD%E5%8F%B6%E3%80%8B%E4%B8%AD%E6%96%87%E7%89%88">点击购票</a></center>
+                                                <br>
+                                                <br>
+                                                <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>关闭</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content">
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                                <div class="modal-body text-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8">
+                                                <!-- Portfolio Modal - Title-->
+                                                <h2 class="portfolio-modal-title text-secondary mb-0">桑塔露琪亚</h2>
+                                                <!-- Icon Divider-->
+                                                <div class="divider-custom">
+                                                    <div class="divider-custom-line"></div>
+                                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                                    <div class="divider-custom-line"></div>
+                                                </div>
+                                                <!-- Portfolio Modal - Image-->
+                                                <a href="3">
+                                                <img class="img-fluid rounded mb-5" src="/static/assets/img/pic/桑塔露琪亚.webp" alt="Tasty Cake"/>
+                                                </a>
+                                                <!-- Portfolio Modal - Text-->
+                                                <p class="mb-5">上海现在最红的音乐剧是什么？恐怕大家都会回答：一票难求的环境式驻场音乐剧《阿波罗尼亚》。如果你喜欢音乐剧，你一定不会没听过“小酒馆”《阿波罗尼亚》的名字。从2020年8月底开演以来，小酒馆人气不断攀升，直到现在每月开票都是全场次秒空。
+
+                                                2021年4月30日，同样是环境式的驻场音乐剧，小酒馆前传《桑塔露琪亚》正式开演，并将在亚洲大厦2楼星空间6号长期驻演。</p>
+                                                <center><a href="https://detail.damai.cn/item.htm?spm=a2oeg.search_category.searchtxt.ditem_0.60594d15mAXslL&id=642560874874">点击购票</a></center>
+                                                <br>
+                                                <br>
+                                                <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>关闭</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal2Label" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content">
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                                <div class="modal-body text-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8">
+                                                <!-- Portfolio Modal - Title-->
+                                                <h2 class="portfolio-modal-title text-secondary mb-0">人间失格</h2>
+                                                <!-- Icon Divider-->
+                                                <div class="divider-custom">
+                                                    <div class="divider-custom-line"></div>
+                                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                                    <div class="divider-custom-line"></div>
+                                                </div>
+                                                <!-- Portfolio Modal - Image-->
+                                                <a href="9">
+                                                <img class="img-fluid rounded mb-5" src="/static/assets/img/pic/人间失格.webp" alt="Circus Tent"/>
+                                                </a>
+                                                <!-- Portfolio Modal - Text-->
+                                                <p class="mb-5">12月10日，中文原创音乐剧《人间失格》在上海大剧院开演，集结了中美英日四国艺术家加盟创制，太宰治与他笔下人物大庭叶藏的传奇人生首次被搬上舞台。主演白举纲与刘令飞领衔互为羁绊，在非现实主义的舞台上牵绊拉扯，还原了原著中的诸多名场面。</p>
+                                                <center><a href="https://detail.damai.cn/item.htm?spm=a2oeg.search_category.searchtxt.ditem_0.60594d15mAXslL&id=642560874874">点击购票</a></center>
+                                                <br>
+                                                <br>
+                                                <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>关闭</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <center><a href="drama">查看更多</a></center>
+            </div>
+            <br>
+            <br>
+            <br>    
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">合作联系</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Content-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="text-muted">电话</div>
+                            <div class="lead font-weight-bold">(852) 46850599</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+                            <div class="text-muted">邮箱</div><a class="lead font-weight-bold" href="mailto:1155092021@link.cuhk.edu.hk">1155092021@link.cuhk.edu.hk</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Copyright Section-->
+        <section class="copyright py-4 text-center text-white">
+            <div class="container"><small class="pre-wrap">Copyright © Your Website 2020</small></div>
+        </section>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="/static/js/scripts.js"></script>
+    </body>
+</html>

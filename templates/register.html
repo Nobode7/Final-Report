@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block header %}
+            <!-- Page Header-->
+            <header class="masthead">
+                <div class="overlay">
+                    <div class="jumbotron bkgnd-img partial"style="max-height: 330px; margin-top: 10%">
+                        <div class="container">
+                           <center><h1>注册</h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+{% endblock %}
+{% block content %}
+        <!-- Main Content-->
+        <div class="container">
+            <div class="signup-form">
+                <h3>请输入邮箱并设置账号及密码</h3>
+                <form method='POST' action=''>
+                    {{form.hidden_tag()}}
+                    {{form.email}}
+                    {{form.username}}
+                    {{form.password}}
+                    {{form.submit(class="btn btn-success",id="submitBtn")}}
+                </form>
+        </div>
+        {% endblock %}

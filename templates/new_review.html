@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block header %}
+<!-- Page Header-->
+<header class="masthead">
+    <div class="overlay">
+    <div class="container">
+        <div class="jumbotron bkgnd-img partial"style="max-height: 330px; margin-top: 10%">
+            <div class="container">
+               <center><h1>添加评价</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</header>
+{% endblock %}
+{% block content %}
+        <!-- Main Content-->
+        <div class="container">
+            <form method='POST' action=''>
+           {{form.hidden_tag()}}
+           {{form.drama.label(class="form-label")}}<br>  
+           {{form.drama(class="form-control")}}
+           {{form.rank.label(class="form-label")}}<br>  
+           {{form.rank(class="form-control")}}
+           {{form.review_body.label(class="form-label")}}
+           {{form.review_body(rows='3',cols='100',class="form-control",id="editor")}}
+           {{form.submit(class="btn btn-primary",id="submit")}}
+       </form>
+       </div><!-- end container -->
+       {% endblock %}
+

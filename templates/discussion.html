@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block header %}
+    <!-- Page Header-->
+    <header>
+    <div class="overlay">
+    <div class="container">
+        <div class="jumbotron bkgnd-img partial"style="max-height: 330px; margin-top: 10%">
+            <div class="container">
+               <center><h1>论坛</h1>
+            </div>
+        </div>
+    </div>
+    </div>
+    </header>
+{% endblock %}
+{% block content %}
+        <!-- Main Content-->
+        <div class="container">            
+            <table class="table table-striped">
+            <tr>
+                <th>分类</th>
+                <th>标题</th>
+                <th>作者</th>
+                <th>日期</th>
+                <th>内容</th>
+            </tr>
+            {% for discussion in discussions %}
+                <tr>
+                    <td>{{discussion.category}}</td>
+                    <td>{{discussion.title}}</td>
+                    <td>{{discussion.author}}</td>
+                    <td>{{discussion.date_created.strftime('%Y-%m-%d') }}</td>
+                    <td>{{discussion.discussion_body}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            <a href="new-discussion">加入讨论！</a>
+        </div>
+        <!-- Footer-->
+        {% endblock %}

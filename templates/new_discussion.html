@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block header %}
+<!-- Page Header-->
+<header class="masthead">
+    <div class="overlay">
+    <div class="container">
+        <div class="jumbotron bkgnd-img partial"style="max-height: 330px; margin-top: 10%">
+            <div class="container">
+               <center><h1>加入讨论</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</header>
+{% endblock %}
+{% block content %}
+        <!-- Main Content-->
+        <div class="container">
+            <form method='POST' action=''>
+           {{form.hidden_tag()}}
+           {{form.category.label(class="form-label")}}<br>  
+           {{form.category(class="form-control")}}
+           {{form.title.label(class="form-label")}}<br>  
+           {{form.title(class="form-control")}}
+           {{form.discussion_body.label(class="form-label")}}
+           {{form.discussion_body(rows='3',cols='100',class="form-control",id="editor")}}
+           {{form.submit(class="btn btn-primary",id="submit")}}
+       </form>
+       <script>
+        var Submit = document.getElementById('submit');
+        Submit.addEventListener('click', redirect, false);
+        function redirect() {
+        alert('提交成功！');
+        }
+       </script>
+       </div><!-- end container -->
+       {% endblock %}
+

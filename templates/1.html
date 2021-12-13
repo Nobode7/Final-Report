@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block header %}
+    <!-- Page Header-->
+    <div class="jumbotron bkgnd-img partial"style="max-height: 330px; margin-top: 10%">
+        <div class="container">
+           <center><h1>戏剧详情</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+<!-- Main Content-->
+<style>
+    body{
+        margin: 0;
+    }
+    .box .left{
+        width:50%;
+        height: 500px;
+        float:left;
+    }
+    .box .right{
+        width:50%;
+        height:500px;
+        float:left;
+    }
+</style>
+<div class="col-lg-8">
+    <!-- Portfolio Modal - Title-->
+    <div class="box">
+        <div class="left">
+            <img src="/static/assets/img/pic/危险游戏.webp" width="306px" height="412px">
+        </div>
+        <div class="right">
+            <h2 class="portfolio-modal-title text-secondary mb-0">危险游戏</h2>
+            <!-- Portfolio Modal - Image-->
+            <div class="item_txt">
+                <div class="item_venue">
+                    上海| 星空间66号·Salute小剧场
+                </div>
+                <div class="item_time">
+                    2021.12.13-2021.12.31
+                </div>
+                <div class="item_price">
+                    199-399 元
+                </div>
+                <div class="item_ticket">
+                    <button class="btn btn-primary"" id="anchor1">购票</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="review">
+        <strong><h2>剧评</h2></strong>
+        <table class="table table-striped">
+            <tr>
+                <th>剧目</th>
+                <th>评分</th>
+                <th>作者</th>
+                <th>日期</th>
+                <th>剧评</th>
+            </tr>
+            {% for review in reviews %}
+                <tr>
+                    <td>{{review.drama}}</td>
+                    <td>{{review.rank}}</td>
+                    <td>{{review.author}}</td>
+                    <td>{{review.date_created.strftime('%Y-%m-%d') }}</td>
+                    <td>{{review.review_body}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            <a href="new-review">写剧评</a>
+    </div>
+    <br>    
+    <div class="item_intro">
+        <strong><h2>剧情介绍</h2></strong>
+        <p>
+            外百老汇悬疑音乐剧《危险游戏》，根据1924年在美国芝加哥发生的“利奥波德与勒布案”改编，两个家境殷实、受过良好教育的青年，犯下了一桩惊天杀人案。曾经震惊社会的真实案件，具有个性的人物和他们身上精英阶层的社会标签……这一切都让《危险游戏》的故事备受关注。
+            <br>
+            音乐剧《危险游戏》于2005年上演于外百老汇，2016年韩国版本首次引进至中国。2020年由致敬文化、星在文化制作，MP&Company联合制作的《危险游戏》中文版，于2020年12月18日-2021年1月17日在上海共舞台完成了首轮演出。2021年6月30日-8月8日完成了第二轮中剧场长档期演出。
+            <br>
+            85场“假释审判”
+            85次于理查德和内森的相遇
+            正义还是邪恶？
+            操控还是妥协？
+            <br>
+            这一次
+            他们的故事将在“星空间”继续
+            全新制作
+            即将揭开面纱
+       </p>
+    </div>
+    <br>
+    <div class="cast">
+        <strong><h2>卡司排期</h2></strong>
+        <br>
+        <img src="/static/assets/img/pic/危险游戏_cast.webp">
+    </div>
+</div>
+    <script>
+        var anchor = document.getElementById('anchor1');
+        anchor.addEventListener('click', opennewtab, false);
+        function opennewtab() {
+        alert('您即将进入购票网站');
+        var win = window.open(href='https://detail.damai.cn/item.htm?spm=a2oeg.search_category.0.0.60594d15IXRHak&id=654677574083&clicktitle=%E7%8E%AF%E5%A2%83%E5%BC%8F%E9%A9%BB%E6%BC%94%E9%9F%B3%E4%B9%90%E5%89%A7%E3%80%8A%E5%8D%B1%E9%99%A9%E6%B8%B8%E6%88%8F%E3%80%8B');
+        win.focus();
+        }
+    </script>
+</div>    
+<!-- Footer-->
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block header %}
+    <!-- Page Header-->
+    <div class="jumbotron bkgnd-img partial"style="max-height: 330px; margin-top: 10%">
+        <div class="container">
+           <center><h1>所有戏剧</h1>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+        <!-- Post Content-->
+        <div class="container">
+            <div id="album">
+            <div class="container" id="album_items">
+               {% for item in dataset %}
+                {% if loop.index == 1 %}{% set counter = ( counter | default(1) ) %}{% endif %}
+                {% if counter == 1 %}<div class="row">{% endif %}
+                <div class="col-md-4">
+                  <div class="thumbnail">
+                   <img src="{{ item['Picture'] }}" width="306px" height="412px">
+                      <div class="caption"><br>{{ item['Title'] }}<br>{{ item['Venue'] }}<br>{{ item['Time'] }}<br>{{ item['Price'] }}</div>
+                       <a href='{{item['Link']}}'>购票</a>
+                    </div>
+                </div>
+               {% if counter == 3 %}</div><!--end row-->{%  set counter = ( counter | default(1) ) %}{% else %}{% set counter = ( counter | default(0) ) + 1 %}{% endif %}
+              {% endfor %}
+
+            </div> <!-- end container -->
+        </div><!-- end of main container -->
+        <!-- Footer-->
+{% endblock %}

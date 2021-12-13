@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block header %}
+    <!-- Page Header-->
+    <div class="jumbotron bkgnd-img partial"style="max-height: 330px; margin-top: 10%">
+        <div class="container">
+           <center><h1>戏剧详情</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+<!-- Main Content-->
+<style>
+    body{
+        margin: 0;
+    }
+    .box .left{
+        width:50%;
+        height: 500px;
+        float:left;
+    }
+    .box .right{
+        width:50%;
+        height:500px;
+        float:left;
+    }
+</style>
+<div class="col-lg-8">
+    <!-- Portfolio Modal - Title-->
+    <div class="box">
+        <div class="left">
+            <img src="/static/assets/img/pic/人间失格.webp">
+        </div>
+        <div class="right">
+            <h2 class="portfolio-modal-title text-secondary mb-0">人间失格</h2>
+            <!-- Portfolio Modal - Image-->
+            <div class="item_txt">
+                <div class="item_venue">
+                    上海| 上海大剧院-大剧场
+                </div>
+                <div class="item_time">
+                    2021.12.15-2021.12.19
+                </div>
+                <div class="item_price">
+                    180-1080 元
+                </div>
+                <div class="item_ticket">
+                    <button class="btn btn-primary" id="anchor1">购票</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="review">
+        <strong><h2>剧评</h2></strong>
+        <table class="table table-striped">
+            <tr>
+                <th>剧目</th>
+                <th>评分</th>
+                <th>作者</th>
+                <th>日期</th>
+                <th>剧评</th>
+            </tr>
+            {% for review in reviews %}
+                <tr>
+                    <td>{{review.drama}}</td>
+                    <td>{{review.rank}}</td>
+                    <td>{{review.author}}</td>
+                    <td>{{review.date_created.strftime('%Y-%m-%d') }}</td>
+                    <td>{{review.review_body}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            <a href="new-review">写剧评</a>
+    </div>
+    <br>    
+    <div class="item_intro">
+        <strong><h2>剧情介绍</h2></strong>
+        <img src="/static/assets/img/pic/人间失格_intro.png">
+    </div>
+    <br>
+    <div class="cast">
+        <strong><h2>卡司排期</h2></strong>
+        <br>
+        <img src="/static/assets/img/pic/人间失格_cast.webp">
+    </div>
+</div>
+    <script>
+        var anchor = document.getElementById('anchor1');
+        anchor.addEventListener('click', opennewtab, false);
+        function opennewtab() {
+        alert('您即将进入购票网站');
+        var win = window.open(href='https://detail.damai.cn/item.htm?spm=a2oeg.search_category.0.0.60594d15IXRHak&id=655845361135&clicktitle=%E4%B8%AD%E6%96%87%E5%8E%9F%E5%88%9B%E9%9F%B3%E4%B9%90%E5%89%A7%E3%80%8A%E4%BA%BA%E9%97%B4%E5%A4%B1%E6%A0%BC%E3%80%8B%EF%BC%88121021%EF%BC%89');
+        win.focus();
+        }
+    </script>
+</div>    
+<!-- Footer-->
+{% endblock %}

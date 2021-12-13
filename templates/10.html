@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block header %}
+    <!-- Page Header-->
+    <div class="jumbotron bkgnd-img partial"style="max-height: 330px; margin-top: 10%">
+        <div class="container">
+           <center><h1>戏剧详情</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+<!-- Main Content-->
+<style>
+    body{
+        margin: 0;
+    }
+    .box .left{
+        width:50%;
+        height: 500px;
+        float:left;
+    }
+    .box .right{
+        width:50%;
+        height:500px;
+        float:left;
+    }
+</style>
+<div class="col-lg-8">
+    <!-- Portfolio Modal - Title-->
+    <div class="box">
+        <div class="left">
+            <img src="/static/assets/img/pic/Romeo.webp" width="306px" height="412px">
+        </div>
+        <div class="right">
+            <h2 class="portfolio-modal-title text-secondary mb-0">罗密欧与朱丽叶</h2>
+            <!-- Portfolio Modal - Image-->
+            <div class="item_txt">
+                <div class="item_venue">
+                    上海| 上汽上海文化广场
+                </div>
+                <div class="item_time">
+                    2021.12.15-2021.12.19
+                </div>
+                <div class="item_price">
+                    80-1080 元
+                </div>
+                <div class="item_ticket">
+                    <button class="btn btn-primary" id="anchor1">购票</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="review">
+        <strong><h2>剧评</h2></strong>
+        <table class="table table-striped">
+            <tr>
+                <th>剧目</th>
+                <th>评分</th>
+                <th>作者</th>
+                <th>日期</th>
+                <th>剧评</th>
+            </tr>
+            {% for review in reviews %}
+                <tr>
+                    <td>{{review.drama}}</td>
+                    <td>{{review.rank}}</td>
+                    <td>{{review.author}}</td>
+                    <td>{{review.date_created.strftime('%Y-%m-%d') }}</td>
+                    <td>{{review.review_body}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            <a href="new-review">写剧评</a>
+    </div>
+    <br>    
+    <div class="item_intro">
+        <strong><h2>剧情介绍</h2></strong>
+        <p>
+            <strong>第一幕</strong>
+            中世纪意大利维洛纳的两大家族–蒙特鸠（the Montagues）及卡布雷特（the Capulets）–之间存在着世代未解的矛盾，时常演变成街头的暴力械斗，无人能够制止。两家族的女主人（Lady Capulet & Lady Montague）想尽办法降低冲突的产生；此时蒙特鸠的罗密欧（Romeo）与卡布雷特的茱丽叶（Juliette）正是对爱情向往的少男少女。
+            <br>
+            <strong>第二幕</strong>
+            仰慕茱丽叶已久的铁豹（Tybalt）在获知婚讯之后，气愤地向罗密欧提出了决斗的要求，但遭到拒绝；反之，莫枯修接受了挑战，却因实力不敌而命丧决斗现场；而为友复仇之心让罗密欧杀了铁豹。此举让两家族间的冲突升到前所未有的高点。
+            <br>
+            罗密欧被驱逐出城；茱丽叶受困家中，被家人受迫再嫁巴黎伯爵。绝望之下，茱丽叶听取劳伦斯神父的建议，服毒假装死去。然而在阴错阳差之下，罗密欧误以为茱丽叶已真死去，在茱丽叶身旁自我了断。苏醒后的茱丽叶不愿苟活，拿起匕首自尽而亡。罗密欧与茱丽叶仿佛被命运女神（La Mort）捉弄，而目睹惨剧的家族成员，痛不欲生。为了回应罗密欧与茱丽叶的期望，发誓尽弃前嫌，蒙特鸠家族与卡布雷特家族和好，不让悲剧再度发生。
+       </p>
+    </div>
+    <br>
+    <div class="cast">
+        <strong><h2>卡司排期</h2></strong>
+        <br>
+        <img src="/static/assets/img/pic/Romeo_cast.webp">
+    </div>
+</div>
+    <script>
+        var anchor = document.getElementById('anchor1');
+        anchor.addEventListener('click', opennewtab, false);
+        function opennewtab() {
+        alert('您即将进入购票网站');
+        var win = window.open(href='https://detail.damai.cn/item.htm?spm=a2oeg.search_category.0.0.60594d15IXRHak&id=654104924238&clicktitle=%E9%9F%B3%E4%B9%90%E5%89%A7%E3%80%8A%E7%BD%97%E5%AF%86%E6%AC%A7%E4%B8%8E%E6%9C%B1%E4%B8%BD%E5%8F%B6%E3%80%8B%E4%B8%AD%E6%96%87%E7%89%88');
+        win.focus();
+        }
+    </script>
+</div>    
+<!-- Footer-->
+{% endblock %}

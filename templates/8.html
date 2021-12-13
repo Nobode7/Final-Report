@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block header %}
+    <!-- Page Header-->
+    <div class="jumbotron bkgnd-img partial"style="max-height: 330px; margin-top: 10%">
+        <div class="container">
+           <center><h1>戏剧详情</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+<!-- Main Content-->
+<style>
+    body{
+        margin: 0;
+    }
+    .box .left{
+        width:50%;
+        height: 500px;
+        float:left;
+    }
+    .box .right{
+        width:50%;
+        height:500px;
+        float:left;
+    }
+</style>
+<div class="col-lg-8">
+    <!-- Portfolio Modal - Title-->
+    <div class="box">
+        <div class="left">
+            <img src="/static/assets/img/pic/隐秘.webp">
+        </div>
+        <div class="right">
+            <h2 class="portfolio-modal-title text-secondary mb-0">隐秘的角落</h2>
+            <!-- Portfolio Modal - Image-->
+            <div class="item_txt">
+                <div class="item_venue">
+                    上海| 上海共舞台
+                </div>
+                <div class="item_time">
+                    2021.12.14-2022.01.27
+                </div>
+                <div class="item_price">
+                    100-680 元
+                </div>
+                <div class="item_ticket">
+                    <button class="btn btn-primary" id="anchor1">购票</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="review">
+        <strong><h2>剧评</h2></strong>
+        <table class="table table-striped">
+            <tr>
+                <th>剧目</th>
+                <th>评分</th>
+                <th>作者</th>
+                <th>日期</th>
+                <th>剧评</th>
+            </tr>
+            {% for review in reviews %}
+                <tr>
+                    <td>{{review.drama}}</td>
+                    <td>{{review.rank}}</td>
+                    <td>{{review.author}}</td>
+                    <td>{{review.date_created.strftime('%Y-%m-%d') }}</td>
+                    <td>{{review.review_body}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            <a href="new-review">写剧评</a>
+    </div>
+    <br>    
+    <div class="item_intro">
+        <strong><h2>剧情介绍</h2></strong>
+        <p>
+            一系列离奇的死亡案件，让这座小城市的上空疑云密布。
+            <br>
+            隐忍数年的上门女婿，制造了精心谋划的连环杀人案，却被几个在远处玩耍的小孩无意中拍下。原本无忧无虑的暑假，被命运强行扭转了方向。
+            <br>
+            天真烂漫的孩子、文质彬彬的教师，在无人知晓的隐秘角落里，露出了内心最深处的底色，迈向了万劫不复的未来……
+            <br>
+            这是一出关于爱的故事，当真实与恶赤裸裸的呈现在眼前。深刻的象征表达及哲学内涵在国产悬疑剧中并不多见。丝毫不拖泥带水的剧情节奏，完全打破悬疑题材的桎梏。
+            <br>
+            同时小演员如何在舞台上呈现，在整个中国音乐剧市场都是一次非凡的挑战。
+       </p>
+    </div>
+    <br>
+    <div class="cast">
+        <strong><h2>卡司排期</h2></strong>
+        <br>
+        <img src="/static/assets/img/pic/隐秘_cast.webp">
+    </div>
+</div>
+    <script>
+        var anchor = document.getElementById('anchor1');
+        anchor.addEventListener('click', opennewtab, false);
+        function opennewtab() {
+        alert('您即将进入购票网站');
+        var win = window.open(href='https://detail.damai.cn/item.htm?spm=a2oeg.search_category.0.0.60594d15IXRHak&id=641912396564&clicktitle=%E3%80%90%E7%BC%AA%E6%97%B6%E5%AE%A2%E3%80%91%E9%9F%B3%E4%B9%90%E5%89%A7%E3%80%8A%E9%9A%90%E7%A7%98%E7%9A%84%E8%A7%92%E8%90%BD%E3%80%8B%20%E3%80%8C%E7%B4%AB%E9%87%91%E9%99%88%E7%A4%BE%E4%BC%9A%E6%B4%BE%E6%8E%A8%E7%90%86%E4%B8%89%E9%83%A8%E6%9B%B2%E3%80%8D');
+        win.focus();
+        }
+    </script>
+</div>    
+<!-- Footer-->
+{% endblock %}

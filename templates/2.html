@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block header %}
+    <!-- Page Header-->
+    <div class="jumbotron bkgnd-img partial"style="max-height: 330px; margin-top: 10%">
+        <div class="container">
+           <center><h1>戏剧详情</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+<!-- Main Content-->
+<style>
+    body{
+        margin: 0;
+    }
+    .box .left{
+        width:50%;
+        height: 500px;
+        float:left;
+    }
+    .box .right{
+        width:50%;
+        height:500px;
+        float:left;
+    }
+</style>
+<div class="col-lg-8">
+    <!-- Portfolio Modal - Title-->
+    <div class="box">
+        <div class="left">
+            <img src="/static/assets/img/pic/Flames.webp" width="306px" height="412px">
+        </div>
+        <div class="right">
+            <h2 class="portfolio-modal-title text-secondary mb-0">火焰</h2>
+            <!-- Portfolio Modal - Image-->
+            <div class="item_txt">
+                <div class="item_venue">
+                    上海| 星空间4号·缪时客小剧场
+                </div>
+                <div class="item_time">
+                    2021.12.13-2021.12.31
+                </div>
+                <div class="item_price">
+                    200-380 元
+                </div>
+                <div class="item_ticket">
+                    <button class="btn btn-primary" id="anchor1">购票</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="review">
+        <strong><h2>剧评</h2></strong>
+        <table class="table table-striped">
+            <tr>
+                <th>剧目</th>
+                <th>评分</th>
+                <th>作者</th>
+                <th>日期</th>
+                <th>剧评</th>
+            </tr>
+            {% for review in reviews %}
+                <tr>
+                    <td>{{review.drama}}</td>
+                    <td>{{review.rank}}</td>
+                    <td>{{review.author}}</td>
+                    <td>{{review.date_created.strftime('%Y-%m-%d') }}</td>
+                    <td>{{review.review_body}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            <a href="new-review">写剧评</a>
+    </div>
+    <br>    
+    <div class="item_intro">
+        <strong><h2>剧情介绍</h2></strong>
+        <p>
+            一年前，爱德蒙惨死在火场之中，他的死亡留下了一场骇人犯罪，以及一个无法解开的谜团。现在，就在爱德蒙安息的陵园中，一切的秘密不再沉睡，真正的罪人即将浮现......在这个全新的沉浸式环境中，暴风雨夜、陵园、酒吧、大火中的办公室等环境都将零距离地出现在观众面前。在现场伴奏的环绕下，观众将可以与台上互动，全面解放五感，身临其境地感受剧中“罗生门式”的故事，面对无处不在的迂回、反转和惊喜，直到最后令人震撼的谜底揭开。
+       </p>
+    </div>
+    <br>
+    <div class="cast">
+        <strong><h2>卡司排期</h2></strong>
+        <br>
+        <img src="/static/assets/img/pic/flame_cast.webp">
+    </div>
+</div>
+    <script>
+        var anchor = document.getElementById('anchor1');
+        anchor.addEventListener('click', opennewtab, false);
+        function opennewtab() {
+        alert('您即将进入购票网站');
+        var win = window.open(href='https://detail.damai.cn/item.htm?spm=a2oeg.search_category.0.0.579e18d0wUh2bH&id=645035282021&clicktitle=%E6%B2%89%E6%B5%B8%E5%BC%8F%E6%82%AC%E7%96%91%E9%9F%B3%E4%B9%90%E5%89%A7%E3%80%8AFLAMES%E7%81%AB%E7%84%B0%E3%80%8B');
+        win.focus();
+        }
+    </script>
+</div>    
+<!-- Footer-->
+{% endblock %}
